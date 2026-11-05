@@ -2,7 +2,6 @@
 import { createElementWithClass } from './modules/elements.js';
 import Filters from './modules/filters.js';
 const filters = new Filters();
-// const { cloneElement } = require('react');
 
 let columns, rowElement;
 const productsDiv = document.querySelector('.products');

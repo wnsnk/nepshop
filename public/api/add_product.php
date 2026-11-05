@@ -2,7 +2,13 @@
 
 use function PHPSTORM_META\type;
 
-$connection = include('../../src/database.php');
+if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
+    $connection = include('../../src/database.php');
+} else {
+    $connection = include('../src/database.php');
+}
+
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -25,8 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             VALUES ('$name', '$description', '$imgUrl', '$sizeAmount', $price)";
     $query = mysqli_query($connection, $sql);
     if ($query) {
+        error_log('yay');
         echo json_encode(['succes' => true]);
     } else {
+        error_log('nay');
         echo json_encode(['succes' => false]);
         // response status 500?
     }

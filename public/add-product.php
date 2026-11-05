@@ -43,23 +43,10 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && isset($_SESSION['
                 <label for="price" class="form-label">Prijs</label>
                 <input type="number" step="0.01" name="price" class="form-control" id="price">
             </div>
-            <h2>Maten en voorraad</h2>
-            <div class="row">
-                <div class="mb-3 col">
-                    <label for="size" class="form-label">Maat</label>
-                    <input type="text" name="size" class="form-control" id="size" maxlength="5">
-                </div>
-                <div class="mb-3 col">
-                    <label for="amount" class="form-label">Voorraad</label>
-                    <input type="number" name="amount" class="form-control" id="amount">
-                </div>
-                <div class="col">
-                    <button class="btn btn-warning">Maat toevoegen</button>
-                </div>
+            <div class="mb-3 col">
+                <label for="sizeAmount" class="form-label">Maten en voorraad (IN JSON)</label>
+                <input type="text" name="sizeAmount" class="form-control" id="sizeAmount" value='{"xxs":0,"xs":0,"s":0,"m":0,"l":0,"xl":0,"xxl":0}'>
             </div>
-
-
-
             <button type="submit" id="submit" class="btn btn-primary">Toevoegen</button>
         </form>
     </div>
