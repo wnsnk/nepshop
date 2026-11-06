@@ -1,6 +1,7 @@
 <?php
 
 use function PHPSTORM_META\type;
+// TODO ADD CHECK IF USER IS ADMIN
 
 if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
     $connection = include('../../src/database.php');
