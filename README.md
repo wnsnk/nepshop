@@ -1,6 +1,6 @@
 # nepshop
 (Work in progress) a fictional webshop i created to practice javascript/PHP.
-There is a demo of the website 
+## Demo
 <a href='https://casw.wpconcept.work/'>Click here to visit a live demo. (https://casw.wpconcept.work/)</a>
 
 
