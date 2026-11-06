@@ -23,7 +23,7 @@
         <?php
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
             if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) {
-                echo '<a href="/admin-dashboard.php" type="button" class="btn btn-primary me-2">Admin Dashboard</a>';
+                echo '<a href="/admin/dashboard.php" type="button" class="btn btn-primary me-2">Admin Dashboard</a>';
             }
             echo '<a href="/log-out.php" type="button" class="btn btn-outline-primary me-2">Uitloggen</a>';
         } else {
