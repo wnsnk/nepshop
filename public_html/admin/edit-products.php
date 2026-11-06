@@ -16,48 +16,34 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && isset($_SESSION['
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add products</title>
+    <title>Productbeheer</title>
     <?php include('../../src/templates/bootstrap.html') ?>
 </head>
 
 <body data-bs-theme="dark">
     <?php include('../../src/templates/header.php') ?>
     <div class="container">
-        <h1>Nieuw product toevoegen</h1>
+        <h1>Productbeheer</h1>
         <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Sizes/Amounts</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody id="products"></tbody>
 
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <div class="mb-3">
-                <label for="productName" class="form-label">Naam product</label>
-                <input type="text" class="form-control" name="productName" id="productName" maxlength="50">
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Product Beschrijving</label>
-                <textarea class="form-control" name="description" id="description" maxlength="500"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="imgUrl" class="form-label">Foto URL</label>
-                <input type="url" name="imgUrl" class="form-control" id="imgUrl" maxlength="100">
-            </div>
-            <div class="mb-3">
-                <label for="price" class="form-label">Prijs</label>
-                <input type="number" step="0.01" name="price" class="form-control" id="price">
-            </div>
-            <div class="mb-3 col">
-                <label for="sizeAmount" class="form-label">Maten en voorraad (IN JSON)</label>
-                <input type="text" name="sizeAmount" class="form-control" id="sizeAmount" value='{"xxs":0,"xs":0,"s":0,"m":0,"l":0,"xl":0,"xxl":0}'>
-            </div>
-            <button type="submit" id="submit" class="btn btn-primary">Toevoegen</button>
-        </form>
+        </table>
     </div>
-
 
     <?php include('../../src/templates/footer.html') ?>
 </body>
+<script type="module" src="javascript/edit-products.js"></script>
 
 </html>
 
 
 <?php
-
-include('api/add_product.php');

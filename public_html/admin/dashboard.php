@@ -13,11 +13,11 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && isset($_SESSION['
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <?php include('../src/templates/bootstrap.html') ?>
+    <?php include('../../src/templates/bootstrap.html') ?>
 </head>
 
 <body data-bs-theme="dark">
-    <?php include('../src/templates/header.php') ?>
+    <?php include('../../src/templates/header.php') ?>
     <div class="container">
         <h1>Admin Dashboard</h1>
         <div class="row">
@@ -36,7 +36,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && isset($_SESSION['
 
 
 
-    <?php include('../src/templates/footer.html') ?>
+    <?php include('../../src/templates/footer.html') ?>
 
 </body>
 
