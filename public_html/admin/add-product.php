@@ -1,5 +1,3 @@
-<!-- TODO FIX SIZES AND AMOUNTS -->
-
 <?php
 
 use function PHPSTORM_META\type;
