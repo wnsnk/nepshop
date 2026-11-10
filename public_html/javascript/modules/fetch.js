@@ -52,3 +52,21 @@ export async function logInUser(emailAddress, passWord) {
         console.error(error.message);
     }
 }
+
+export async function deleteProduct(id) {
+    const url = '/api/delete_product.php';
+    try {
+        const response = await fetch(url, {
+            method: 'DELETE',
+            body: JSON.stringify({ id: id }),
+        });
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log(result);
+    } catch (error) {
+        console.error(error.message);
+    }
+}

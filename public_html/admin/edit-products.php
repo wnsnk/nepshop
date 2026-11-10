@@ -29,9 +29,10 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && isset($_SESSION['
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Sizes/Amounts</th>
-                    <th scope="col">Price</th>
+                    <th scope="col">Naam</th>
+                    <th scope="col">Maten en voorraad</th>
+                    <th scope="col">Prijs</th>
+                    <th scope="col">Bewerken/Verwijderen</th>
                 </tr>
             </thead>
             <tbody id="products"></tbody>
