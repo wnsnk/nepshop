@@ -16,7 +16,13 @@ if ($method === 'POST') {
     $user_id = $input['customerId'];
 
     $cart = $input['cart'];
-    $cartEncoded = json_encode($cart);
+    $cartEncoded = [];
+    foreach ($cart as $item) {
+        $item = json_decode($item, true);
+        array_push($cartEncoded, $item);
+    }
+    $cartEncoded = json_encode($cartEncoded);
+    error_log($cartEncoded);
     $totalAmount = $input['totalAmount'];
     // TODO CHECK IF TOTAL AMOUNT IS CORRECT IN PHP?
     $calcTotal = 0;
