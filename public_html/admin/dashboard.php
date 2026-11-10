@@ -28,7 +28,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && isset($_SESSION['
                 <a href="/admin/edit-products.php" class="btn btn-primary btn-lg">Productbeheer</a>
             </div>
             <div class="col">
-                <a href="/admin/.php" class="btn btn-primary btn-lg">Orderbeheer</a>
+                <a href="/admin/orders.php" class="btn btn-primary btn-lg">Orderbeheer</a>
             </div>
 
         </div>
