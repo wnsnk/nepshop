@@ -54,6 +54,18 @@
 - Viewing orders ✔️
 - Editing orders ❌
 
+### API
+- API SAFETY (Only admins can update db) ❌
+- Get full address ✔️
+- add products ✔️
+- Delete products ✔️
+- Get stock ✔️
+- Get orders ✔️
+- Checkout ✔️
+- Register user ✔️
+- Log in user ✔️
+- Get user info ✔️
+
 
 
 
